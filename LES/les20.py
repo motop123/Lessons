@@ -1,7 +1,7 @@
-def mul(a):
-    def helper(b):
-        return a * b
-    return helper
+import requests
 
-mul5 = mul(5)
-print(mul5(10)) # = 50
+def get_webpage(url):
+    page = requests.get(url)
+    return page.text
+url = 'http://google.com'
+print(get_webpage(url))
